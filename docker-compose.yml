@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:15
+    ports:
+      - 5435:5433
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sapta20k
+      POSTGRES_DB: nest-project
+    networks:
+      - freecodecamp
+  test-db:
+    image: postgres:15
+    ports:
+      - 5435:5433
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sapta20k
+      POSTGRES_DB: nest-project
+    networks:
+      - freecodecamp
+networks:
+  freecodecamp:
